@@ -2,10 +2,11 @@
 
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
+import React from 'react';
 
 interface TextRevealProps {
     text: string;
-    el?: keyof JSX.IntrinsicElements;
+    el?: keyof React.JSX.IntrinsicElements;
     className?: string;
     delay?: number;
 }

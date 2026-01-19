@@ -17,26 +17,26 @@ export function Header() {
             <span className="text-lg font-semibold">Meronatic</span>
           </div>
           <nav className="hidden lg:flex items-center space-x-6">
-            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Services
             </a>
-            <a href="#benefits" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#benefits" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Benefits
             </a>
-            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Process
             </a>
-            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
           </nav>
         </div>
         <div className="flex items-center space-x-3">
           <Button className="hidden md:inline-flex" size="sm" asChild>
-            <a href="#contact">Request Consultation</a>
+            <a href="/#contact">Request Consultation</a>
           </Button>
           <Button variant="outline" size="sm" className="hidden sm:inline-flex" asChild>
-            <a href="#contact">Contact PRO Team</a>
+            <a href="/#contact">Contact PRO Team</a>
           </Button>
           <Button
             variant="ghost"
@@ -54,28 +54,28 @@ export function Header() {
         <div className="lg:hidden border-t bg-background">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-3">
             <a
-              href="#services"
+              href="/#services"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Services
             </a>
             <a
-              href="#benefits"
+              href="/#benefits"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Benefits
             </a>
             <a
-              href="#process"
+              href="/#process"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Process
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -83,10 +83,10 @@ export function Header() {
             </a>
             <div className="pt-2 space-y-2">
               <Button className="w-full" size="sm" asChild onClick={() => setMobileMenuOpen(false)}>
-                <a href="#contact">Request Consultation</a>
+                <a href="/#contact">Request Consultation</a>
               </Button>
               <Button variant="outline" className="w-full" size="sm" asChild onClick={() => setMobileMenuOpen(false)}>
-                <a href="#contact">Contact PRO Team</a>
+                <a href="/#contact">Contact PRO Team</a>
               </Button>
             </div>
           </nav>

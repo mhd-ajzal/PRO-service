@@ -98,6 +98,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     hideServiceDropdown={true}
                     preselectedService={service.title}
                     layout="split"
+                    withContactInfo={false}
                     title="Get Started"
                     subtitle={`Request expert assistance for ${service.title}.`}
                 />

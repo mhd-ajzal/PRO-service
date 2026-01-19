@@ -17,6 +17,7 @@ interface LeadFormSectionProps {
   title?: string;
   subtitle?: string;
   layout?: "split" | "compact";
+  withContactInfo?: boolean;
 }
 
 export function LeadFormSection({
@@ -24,10 +25,11 @@ export function LeadFormSection({
   preselectedService,
   title = "Request a Consultation",
   subtitle = "Our team will contact you shortly to discuss your requirements.",
-  layout = "split"
+  layout = "split",
+  withContactInfo = true
 }: LeadFormSectionProps) {
 
-  // Compact Layout (Original style, good for sidebars)
+  // Compact Layout (Sidebar style)
   if (layout === "compact") {
     return (
       <section id="contact" className="py-8 bg-transparent relative overflow-hidden">
@@ -44,64 +46,105 @@ export function LeadFormSection({
     );
   }
 
-  // Split Layout (Default for Main Page)
+  // Split Layout (Default for Main Page, and Service Pages with 'Form Only' request but wanting Image)
+  // If withContactInfo is true -> Show Contact Details
+  // If withContactInfo is false -> Show Big Image (as per "big image needed" request)
+  if (layout === "split") {
+    return (
+      <section id="contact" className="py-20 md:py-32 bg-transparent relative overflow-hidden">
+        {/* Background blobs */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -z-10" />
+
+        <div className="container mx-auto px-4">
+          <FadeIn direction="up">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-card/60 backdrop-blur-md border border-primary/20 rounded-3xl overflow-hidden shadow-2xl">
+
+                {/* Form Side (Span 7) - Slightly smaller to give image more space if needed */}
+                <div className="lg:col-span-7 p-6 md:p-10 lg:p-12 relative">
+                  <div className="space-y-3 mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
+                    <p className="text-lg text-muted-foreground">{subtitle}</p>
+                  </div>
+                  <FormContent hideServiceDropdown={hideServiceDropdown} preselectedService={preselectedService} />
+                </div>
+
+                {/* Right Side: Contact Info OR Image (Span 5) */}
+                <div className="lg:col-span-5 bg-primary/5 border-l border-primary/10 relative overflow-hidden flex flex-col justify-center">
+                  {withContactInfo ? (
+                    <div className="p-6 md:p-10 space-y-8">
+                      <div>
+                        <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+                        <div className="space-y-6">
+                          <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
+                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                              <Phone className="w-5 h-5" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium text-muted-foreground mb-0.5">Call Us</p>
+                              <p className="font-semibold text-lg">+971 50 123 4567</p>
+                            </div>
+                          </div>
+                          <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
+                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                              <Mail className="w-5 h-5" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium text-muted-foreground mb-0.5">Email Us</p>
+                              <p className="font-semibold text-lg">info@meronatic.com</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="pt-8 border-t border-primary/10">
+                        <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white border-none shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                          <MessageCircle className="w-5 h-5" />
+                          Chat on WhatsApp
+                        </Button>
+                      </div>
+                    </div>
+                  ) : (
+                    // Image Mode (No Contact Info)
+                    <div className="absolute inset-0 w-full h-full bg-muted/20">
+                      {/* Abstract Gradient + Pattern Placeholder */}
+                      <div className="absolute inset-0 bg-base-900 opacity-90" />
+                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40 mix-blend-overlay hover:scale-105 transition-transform duration-1000" />
+                      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background/80 to-transparent" />
+                      <div className="absolute bottom-10 left-10 right-10">
+                        <p className="text-2xl font-bold text-foreground/90 mb-2">Ready to scale?</p>
+                        <p className="text-sm text-muted-foreground">Let's build your corporate foundation in the UAE.</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+    );
+  }
+
+  // Condensed "Form Only" Layout (For Service Pages if requested)
   return (
     <section id="contact" className="py-20 md:py-32 bg-transparent relative overflow-hidden">
-      {/* Background blobs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -z-10" />
 
       <div className="container mx-auto px-4">
         <FadeIn direction="up">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-card/60 backdrop-blur-md border border-primary/20 rounded-3xl overflow-hidden shadow-2xl">
-
-              {/* Form Side (Span 8) */}
-              <div className="lg:col-span-8 p-6 md:p-10 lg:p-12 relative">
-                <div className="space-y-3 mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
-                  <p className="text-lg text-muted-foreground">{subtitle}</p>
-                </div>
+          <div className="max-w-3xl mx-auto">
+            <Card className="border-primary/20 shadow-2xl bg-card/80 backdrop-blur">
+              <CardHeader className="text-center space-y-2">
+                <CardTitle className="text-3xl md:text-4xl">{title}</CardTitle>
+                <CardDescription className="text-lg">
+                  {subtitle}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-6 md:p-10">
                 <FormContent hideServiceDropdown={hideServiceDropdown} preselectedService={preselectedService} />
-              </div>
-
-              {/* Contact Info Side (Span 4) */}
-              <div className="lg:col-span-4 bg-primary/5 border-l border-primary/10 p-6 md:p-10 flex flex-col justify-center space-y-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-                  <div className="space-y-6">
-
-                    <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        <Phone className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground mb-0.5">Call Us</p>
-                        <p className="font-semibold text-lg">+971 50 123 4567</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        <Mail className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-muted-foreground mb-0.5">Email Us</p>
-                        <p className="font-semibold text-lg">info@meronatic.com</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div className="pt-8 border-t border-primary/10">
-                  <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white border-none shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
-                    <MessageCircle className="w-5 h-5" />
-                    Chat on WhatsApp
-                  </Button>
-                </div>
-              </div>
-
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </FadeIn>
       </div>

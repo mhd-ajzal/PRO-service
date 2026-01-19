@@ -69,10 +69,10 @@ export function ServicesSection() {
           {/* We pull it up slightly to sit nicely under the arch. */}
           <div className="text-center -mt-12 md:-mt-20 relative z-20">
             <FadeIn direction="up">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
                 Corporate Services
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4 mt-8">
                 Comprehensive solutions for business setup, residency, and compliance in the UAE.
               </p>
             </FadeIn>

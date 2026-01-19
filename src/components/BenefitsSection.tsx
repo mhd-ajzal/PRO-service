@@ -33,8 +33,8 @@ export function BenefitsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
-            <FadeIn key={index} delay={index * 0.2} direction="up">
-              <Card className="text-center h-full hover:shadow-lg transition-transform hover:-translate-y-1 bg-card/90">
+            <FadeIn key={index} delay={index * 0.2} direction="up" className="h-full">
+              <Card className="text-center h-full hover:shadow-lg transition-transform hover:-translate-y-1 bg-card/90 flex flex-col">
                 <CardHeader>
                   <div className="flex justify-center mb-4">
                     <div className="p-3 rounded-full bg-primary/10">
@@ -43,7 +43,7 @@ export function BenefitsSection() {
                   </div>
                   <CardTitle className="text-lg md:text-xl">{benefit.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-sm md:text-base text-muted-foreground">{benefit.description}</p>
                 </CardContent>
               </Card>
