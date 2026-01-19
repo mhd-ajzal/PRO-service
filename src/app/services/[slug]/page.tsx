@@ -56,69 +56,51 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </section>
 
                 {/* Details & Benefits */}
-                <section className="py-20 md:py-32 bg-transparent">
-                    <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                {/* Details & Benefits */}
+                <section className="py-20 bg-transparent">
+                    <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-5xl">
 
-                            {/* Left Column: Image & Content (Span 8) */}
-                            <div className="lg:col-span-8 space-y-8">
-                                {/* Image Placeholder */}
-                                <FadeIn direction="up">
-                                    <div className="w-full aspect-video bg-muted/20 border border-primary/10 rounded-2xl flex items-center justify-center relative overflow-hidden group">
-                                        <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
-                                        <p className="text-muted-foreground font-medium flex items-center gap-2">
-                                            <ImageIcon className="w-5 h-5" />
-                                            Image Placeholder: {service.title}
-                                        </p>
-                                    </div>
-                                </FadeIn>
-
-                                <FadeIn direction="up" delay={0.1}>
-                                    <h2 className="text-2xl md:text-3xl font-bold mb-6">Service Details</h2>
-                                    <div className="prose prose-blue dark:prose-invert max-w-none text-muted-foreground">
-                                        <p className="text-lg leading-relaxed mb-6">
-                                            {service.description} We provide end-to-end support for {service.title}, ensuring
-                                            full compliance with UAE regulations and a smooth, hassle-free process for your
-                                            business.
-                                        </p>
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-                                            {service.details.map((detail, i) => (
-                                                <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-card border border-primary/10">
-                                                    <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-                                                    <span className="text-sm font-medium">{detail}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </FadeIn>
+                        {/* Image Placeholder */}
+                        <FadeIn direction="up">
+                            <div className="w-full aspect-video bg-muted/20 border border-primary/10 rounded-3xl flex items-center justify-center relative overflow-hidden group mb-12 shadow-2xl">
+                                <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
+                                <p className="text-muted-foreground font-medium flex items-center gap-2">
+                                    <ImageIcon className="w-6 h-6" />
+                                    Image Placeholder: {service.title}
+                                </p>
                             </div>
+                        </FadeIn>
 
-                            {/* Right Column: Sticky Form (Span 4) */}
-                            <div className="lg:col-span-4 sticky top-24">
-                                <FadeIn direction="left" delay={0.2}>
-                                    <div className="bg-card border border-primary/10 rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
-                                        <h3 className="text-xl font-bold mb-2">Get Started</h3>
-                                        <p className="text-sm text-muted-foreground mb-6">
-                                            Submit your request for {service.title} assistance.
-                                        </p>
-
-                                        {/* Reuse LeadForm but pass the service title */}
-                                        <div className="-mx-4 md:-mx-0">
-                                            <LeadFormSection
-                                                hideServiceDropdown={true}
-                                                preselectedService={service.title}
-                                                layout="compact"
-                                                title="Get Started"
-                                                subtitle="Request assistance."
-                                            />
+                        <FadeIn direction="up" delay={0.1}>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-8">Service Details</h2>
+                            <div className="prose prose-lg prose-blue dark:prose-invert max-w-none text-muted-foreground">
+                                <p className="text-xl leading-relaxed mb-8">
+                                    {service.description} We provide end-to-end support for {service.title}, ensuring
+                                    full compliance with UAE regulations and a smooth, hassle-free process for your
+                                    business.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                                    {service.details.map((detail, i) => (
+                                        <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-primary/10 hover:border-primary/20 transition-colors shadow-sm">
+                                            <div className="w-2.5 h-2.5 rounded-full bg-primary mt-2 shrink-0" />
+                                            <span className="text-base font-medium">{detail}</span>
                                         </div>
-                                    </div>
-                                </FadeIn>
+                                    ))}
+                                </div>
                             </div>
+                        </FadeIn>
 
-                        </div>
                     </div>
                 </section>
+
+                {/* Lead Form - Full Section */}
+                <LeadFormSection
+                    hideServiceDropdown={true}
+                    preselectedService={service.title}
+                    layout="split"
+                    title="Get Started"
+                    subtitle={`Request expert assistance for ${service.title}.`}
+                />
 
                 {/* Lead Form - Pre-selected and specific */}
                 {/* The LeadFormSection was moved into the grid layout above */}
