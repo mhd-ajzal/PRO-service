@@ -58,7 +58,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 text-center">
         <FadeIn direction="up" delay={0.1}>
           <h1 className="mx-auto max-w-4xl text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight mb-4 md:mb-6">
-            UAE Corporate Services & Business Support
+            UAE HR Consultancy Corporate Services & Business Support
           </h1>
         </FadeIn>
 
@@ -96,14 +96,16 @@ export function HeroSection() {
           >
             {/* Central Hub - Replaced with Meronatic Logo */}
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-              <MeronaticLogo className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 drop-shadow-2xl" />
+              <MeronaticLogo className="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 drop-shadow-2xl" />
             </div>
 
             {/* Floating PRO Service Components - Responsive sizing */}
 
             {/* Trade License Card */}
             {/* Trade License Card */}
-            <div className="floating-card absolute top-8 left-4 md:top-16 md:left-20 w-28 md:w-40 transform-gpu">
+            {/* Trade License Card */}
+            {/* Trade License Card */}
+            <div className="floating-card absolute top-8 left-4 md:top-8 md:left-8 w-36 md:w-52 transform-gpu">
               <img
                 src="/assets/hero/hero-trade-license.png"
                 alt="Trade License"
@@ -113,7 +115,9 @@ export function HeroSection() {
 
             {/* Visa Processing Card */}
             {/* Visa Processing Card */}
-            <div className="floating-card absolute top-20 right-4 md:top-32 md:right-16 w-28 md:w-36 transform-gpu">
+            {/* Visa Processing Card */}
+            {/* Visa Processing Card */}
+            <div className="floating-card absolute top-20 right-4 md:top-20 md:right-6 w-36 md:w-48 transform-gpu">
               <img
                 src="/assets/hero/hero-approval.png"
                 alt="Visa Processing"
@@ -123,7 +127,9 @@ export function HeroSection() {
 
             {/* Emirates ID Card */}
             {/* Emirates ID Card */}
-            <div className="floating-card absolute bottom-12 left-2 md:bottom-20 md:left-12 w-32 md:w-44 transform-gpu">
+            {/* Emirates ID Card */}
+            {/* Emirates ID Card */}
+            <div className="floating-card absolute bottom-12 left-2 md:bottom-10 md:left-8 w-40 md:w-60 transform-gpu">
               <img
                 src="/assets/hero/hero-id.png"
                 alt="Emirates ID"
@@ -133,7 +139,9 @@ export function HeroSection() {
 
             {/* Business Setup Card */}
             {/* Business Setup Card */}
-            <div className="floating-card absolute bottom-16 right-4 md:bottom-24 md:right-20 w-28 md:w-38 transform-gpu">
+            {/* Business Setup Card */}
+            {/* Business Setup Card */}
+            <div className="floating-card absolute bottom-16 right-4 md:bottom-12 md:right-8 w-36 md:w-52 transform-gpu">
               <img
                 src="/assets/hero/hero-setup.png"
                 alt="Business Setup"
@@ -143,7 +151,9 @@ export function HeroSection() {
 
             {/* Government Approvals - Hidden on mobile */}
             {/* Documents - Moved to right side to balance layout */}
-            <div className="floating-card absolute top-20 right-32 w-28 md:w-32 transform-gpu hidden sm:block">
+            {/* Documents - Moved to right side to balance layout */}
+            {/* Documents - Moved to right side to balance layout */}
+            <div className="floating-card absolute top-20 right-32 md:top-64 md:right-8 w-36 md:w-44 transform-gpu hidden sm:block">
               <img
                 src="/assets/hero/hero-docs.png"
                 alt="Documents"
@@ -155,7 +165,9 @@ export function HeroSection() {
 
             {/* Medical & Biometric Card - Hidden on mobile */}
             {/* Medical & Biometric Card - Hidden on mobile */}
-            <div className="floating-card absolute top-40 left-40 w-32 md:w-40 transform-gpu hidden md:block">
+            {/* Medical & Biometric Card - Hidden on mobile */}
+            {/* Medical & Biometric Card - Hidden on mobile */}
+            <div className="floating-card absolute top-40 left-40 md:top-60 md:left-8 w-40 md:w-56 transform-gpu hidden md:block">
               <img
                 src="/assets/hero/hero-medical.png"
                 alt="Medical Test"

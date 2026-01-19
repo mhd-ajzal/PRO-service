@@ -191,7 +191,7 @@ function PhysicsIcon({ item, index, total, baseAngle, radius }: any) {
       className="absolute flex items-center justify-center z-0"
       style={{ x, y }}
     >
-      <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-background/80 backdrop-blur-md border border-primary/20 shadow-lg flex items-center justify-center p-2.5">
+      <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-background/80 backdrop-blur-md border border-primary/20 shadow-lg flex items-center justify-center p-3 md:p-4">
         <item.Icon className={cn("h-full w-full", item.color)} />
       </div>
     </motion.div>

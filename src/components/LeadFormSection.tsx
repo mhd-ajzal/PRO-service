@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { FadeIn } from "./ui/FadeIn";
 import { services } from "../data/services";
 
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, CheckCircle2 } from "lucide-react";
 
 interface LeadFormSectionProps {
   hideServiceDropdown?: boolean;
@@ -140,51 +140,116 @@ export function LeadFormSection({
   );
 }
 
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
+
 function FormContent({ hideServiceDropdown, preselectedService }: { hideServiceDropdown: boolean, preselectedService?: string }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      fullName: formData.get("fullName"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      service: formData.get("service") || preselectedService,
+      message: formData.get("message"),
+      source: window.location.pathname, // Useful for tracking
+      timestamp: new Date().toISOString()
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+
+      setSuccess(true);
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  if (success) {
+    return (
+      <div className="text-center py-12 space-y-4 animate-in fade-in zoom-in duration-300">
+        <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <CheckCircle2 className="w-8 h-8" />
+        </div>
+        <h3 className="text-2xl font-bold">Thank You!</h3>
+        <p className="text-muted-foreground">We received your request and will contact you shortly.</p>
+        <Button onClick={() => setSuccess(false)} variant="outline" className="mt-4">
+          Send Another Request
+        </Button>
+      </div>
+    )
+  }
+
   return (
-    <form className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div className="space-y-2">
         <Label htmlFor="fullName">Full Name</Label>
-        <Input id="fullName" placeholder="Enter your full name" required className="h-11 bg-background/50" />
+        <Input name="fullName" id="fullName" placeholder="Enter your full name" required className="h-11 bg-background/50" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" type="tel" placeholder="+971 50 000 0000" required className="h-11 bg-background/50" />
+          <Input name="phone" id="phone" type="tel" placeholder="+971 50 000 0000" required className="h-11 bg-background/50" />
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" type="email" placeholder="name@company.com" required className="h-11 bg-background/50" />
+          <Input name="email" id="email" type="email" placeholder="name@company.com" required className="h-11 bg-background/50" />
         </div>
       </div>
 
       {!hideServiceDropdown && (
         <div className="space-y-2">
-          <Label htmlFor="service">Service Required</Label>
-          <Select defaultValue={preselectedService}>
-            <SelectTrigger className="h-11 bg-background/50">
-              <SelectValue placeholder="Select a service" />
-            </SelectTrigger>
-            <SelectContent>
-              {services.map((service) => (
-                <SelectItem key={service.id} value={service.slug}>
-                  {service.title}
-                </SelectItem>
-              ))}
-              <SelectItem value="other">Other Inquiry</SelectItem>
-            </SelectContent>
-          </Select>
+          <div className="space-y-2">
+            <Label htmlFor="service">Service Required</Label>
+            <Select name="service" defaultValue={preselectedService}>
+              <SelectTrigger className="h-11 bg-background/50">
+                <SelectValue placeholder="Select a service" />
+              </SelectTrigger>
+              <SelectContent>
+                {services.map((service) => (
+                  <SelectItem key={service.id} value={service.slug}>
+                    {service.title}
+                  </SelectItem>
+                ))}
+                <SelectItem value="other">Other Inquiry</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       )}
 
       <div className="space-y-2">
         <Label htmlFor="message">Message (Optional)</Label>
-        <Textarea id="message" placeholder="Tell us more about your requirements..." className="min-h-[120px] bg-background/50" />
+        <Textarea name="message" id="message" placeholder="Tell us more about your requirements..." className="min-h-[120px] bg-background/50" />
       </div>
 
-      <Button type="submit" size="lg" className="w-full h-12 text-lg font-semibold shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-0.5">
-        Request Callback
+      {error && <p className="text-sm text-red-500">{error}</p>}
+      <Button type="submit" size="lg" disabled={isSubmitting} className="w-full h-12 text-lg font-semibold shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-0.5">
+        {isSubmitting ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Sending...
+          </>
+        ) : (
+          "Request Callback"
+        )}
       </Button>
     </form>
   )
