@@ -3,6 +3,7 @@ export interface ServiceData {
     title: string;
     description: string;
     slug: string;
+    image?: string;
     icon?: string; // We can add icon names or components later if needed
     benefits: string[];
     ctaText: string;
@@ -14,6 +15,7 @@ export const services: ServiceData[] = [
         id: "business-setup",
         title: "Business Setup & Licensing",
         slug: "business-setup",
+        image: "/assets/services/business-setup.png",
         description: "Complete support for Mainland business setup, license issuance, and approvals.",
         benefits: [
             "Mainland business setup",
@@ -34,6 +36,7 @@ export const services: ServiceData[] = [
         id: "trade-license",
         title: "Trade License Services",
         slug: "trade-license",
+        image: "/assets/services/trade-license.png",
         description: "Efficient handling of new license issuance, renewals, and amendments.",
         benefits: [
             "New license issuance",
@@ -54,6 +57,7 @@ export const services: ServiceData[] = [
         id: "visa-immigration",
         title: "Visa & Immigration Services",
         slug: "visa-immigration",
+        image: "/assets/services/visa-immigration.png",
         description: "Streamlined processing for investor, employment, and family visas.",
         benefits: [
             "Investor visa",
@@ -74,6 +78,7 @@ export const services: ServiceData[] = [
         id: "emirates-id",
         title: "Emirates ID Coordination",
         slug: "emirates-id",
+        image: "/assets/services/emirates-id.png",
         description: "Hassle-free application processing, biometrics, and tracking.",
         benefits: [
             "Application processing",
@@ -92,8 +97,9 @@ export const services: ServiceData[] = [
     },
     {
         id: "medical-biometrics",
-        title: "Medical Test & Biometrics",
+        title: "Medical Test ",
         slug: "medical-biometrics",
+        image: "/assets/services/medical-biometrics.png",
         description: "Coordination for medical fitness appointments and government follow-ups.",
         benefits: [
             "Medical fitness appointment",
@@ -112,8 +118,9 @@ export const services: ServiceData[] = [
     },
     {
         id: "mohre-gdrfa",
-        title: "MOHRE & GDRFA Services",
+        title: "MOHRE & ICP/GDRFA Services",
         slug: "mohre-gdrfa",
+        image: "/assets/services/mohre-gdrfa.png",
         description: "Expert handling of labor cards, immigration approvals, and entry permits.",
         benefits: [
             "Labor card processing",
@@ -134,6 +141,7 @@ export const services: ServiceData[] = [
         id: "document-attestation",
         title: "Document Attestation",
         slug: "document-attestation",
+        image: "/assets/services/trade-license.png",
         description: "Local and international attestation for business and personal documents.",
         benefits: [
             "Department of Foreign Affairs",

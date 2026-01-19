@@ -61,13 +61,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-5xl">
 
                         {/* Image Placeholder */}
+                        {/* Service Image */}
                         <FadeIn direction="up">
-                            <div className="w-full aspect-video bg-muted/20 border border-primary/10 rounded-3xl flex items-center justify-center relative overflow-hidden group mb-12 shadow-2xl">
-                                <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
-                                <p className="text-muted-foreground font-medium flex items-center gap-2">
-                                    <ImageIcon className="w-6 h-6" />
-                                    Image Placeholder: {service.title}
-                                </p>
+                            <div className="w-full aspect-video md:aspect-[21/9] bg-muted/20 border border-primary/10 rounded-3xl overflow-hidden mb-12 shadow-2xl relative group">
+                                {service.image ? (
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/5 to-transparent">
+                                        <p className="text-muted-foreground font-medium flex items-center gap-2">
+                                            <ImageIcon className="w-6 h-6" />
+                                            {service.title}
+                                        </p>
+                                    </div>
+                                )}
                             </div>
                         </FadeIn>
 

@@ -48,7 +48,7 @@ export function FadeIn({
     };
 
     return (
-        <div ref={ref} className={`${fullWidth ? 'w-full' : ''}`}>
+        <div ref={ref} className={`${fullWidth ? 'w-full' : ''} h-full`}>
             <motion.div
                 variants={getVariants()}
                 initial="hidden"

@@ -13,9 +13,9 @@ export function AboutSection() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl transform rotate-3 scale-105 -z-10" />
                 <img
-                  src="/assets/about-image.jpg"
-                  alt="Meronatic Corporate Services"
-                  className="rounded-3xl shadow-2xl w-full h-auto object-cover grayscale md:grayscale-0 hover:grayscale-0 transition-all duration-500"
+                  src="/assets/about-image.png"
+                  alt="Meronatic Office"
+                  className="rounded-3xl shadow-2xl w-full h-auto object-cover grayscale-0 md:grayscale-0 hover:grayscale-0 transition-all duration-500"
                   onError={(e) => {
                     // Fallback if image doesn't exist, use a placeholder
                     (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1486406140926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3";

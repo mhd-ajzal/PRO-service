@@ -41,7 +41,7 @@ export function IntroSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <FadeIn key={index} delay={index * 0.1} direction="up">
+            <FadeIn key={index} delay={index * 0.1} direction="up" className="h-full">
               <Card className="text-center h-full hover:shadow-lg transition-shadow bg-card/80 backdrop-blur">
                 <CardHeader>
                   <div className="flex justify-center mb-4">

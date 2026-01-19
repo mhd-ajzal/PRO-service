@@ -36,7 +36,7 @@ export function Header() {
             <a href="/#contact">Request Consultation</a>
           </Button>
           <Button variant="outline" size="sm" className="hidden sm:inline-flex" asChild>
-            <a href="/#contact">Contact PRO Team</a>
+            <a href="/#contact">Contact Our Team</a>
           </Button>
           <Button
             variant="ghost"
