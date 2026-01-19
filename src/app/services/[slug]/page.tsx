@@ -107,6 +107,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                             <LeadFormSection
                                                 hideServiceDropdown={true}
                                                 preselectedService={service.title}
+                                                layout="compact"
+                                                title="Get Started"
+                                                subtitle="Request assistance."
                                             />
                                         </div>
                                     </div>
