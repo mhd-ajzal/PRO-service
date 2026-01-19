@@ -1,0 +1,29 @@
+
+> Design System SaaS Landing Page@0.1.0 build
+> next build --webpack
+
+⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+▲ Next.js 16.1.3 (webpack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.5s
+  Running TypeScript ...
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+Failed to compile.
+
+./src/main.tsx:2:30
+Type error: Could not find a declaration file for module 'react-dom/client'. 'C:/Users/Ajzal/Downloads/Design System SaaS Landing Page/node_modules/react-dom/client.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-dom/client';`
+
+[0m [90m 1 |[39m
+[31m[1m>[22m[39m[90m 2 |[39m   [36mimport[39m { createRoot } [36mfrom[39m [32m"react-dom/client"[39m[33m;[39m
+ [90m   |[39m                              [31m[1m^[22m[39m
+ [90m 3 |[39m   [36mimport[39m [33mApp[39m [36mfrom[39m [32m"./App.tsx"[39m[33m;[39m
+ [90m 4 |[39m   [36mimport[39m [32m"./index.css"[39m[33m;[39m
+ [90m 5 |[39m[0m
+Next.js build worker exited with code: 1 and signal: null

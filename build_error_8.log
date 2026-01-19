@@ -1,0 +1,52 @@
+
+> Design System SaaS Landing Page@0.1.0 build
+> next build --webpack
+
+⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+▲ Next.js 16.1.2 (webpack)
+
+  Creating an optimized production build ...
+Failed to compile.
+
+./src/components/BenefitsSection.tsx
+Module not found: Can't resolve 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/components/Header.tsx
+Module not found: Can't resolve 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/components/IntroSection.tsx
+Module not found: Can't resolve 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/components/LeadFormSection.tsx
+Module not found: Can't resolve 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/components/ProcessSection.tsx
+Module not found: Can't resolve 'lucide-react'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/page.tsx
+
+
+> Build failed because of webpack errors

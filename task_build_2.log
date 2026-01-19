@@ -1,0 +1,63 @@
+
+> Design System SaaS Landing Page@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.1.3 (webpack)
+
+  Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[2]!C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[3]!C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\src\index.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+Failed to compile.
+
+./src/index.css:1:1
+Syntax error: C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\src\index.css The `outline-ring/50` class does not exist. If `outline-ring/50` is a custom class, make sure it is defined within a `@layer` directive.
+
+[1m[31m>[39m[22m[90m 1 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 2 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 3 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+./src/index.css
+Syntax error: C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\src\index.css The `outline-ring/50` class does not exist. If `outline-ring/50` is a custom class, make sure it is defined within a `@layer` directive. (1:1)
+
+[1m[31m>[39m[22m[90m 1 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 2 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 3 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+    at tryRunOrWebpackError (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:316134)
+    at __webpack_require_module__ (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:131536)
+    at __nested_webpack_require_161494__ (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:130971)
+    at C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:131828
+    at symbolIterator (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:14:9224), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:14:6378)
+    at C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:130691
+    at symbolIterator (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\neo-async\async.js:1:14402)
+-- inner error --
+Syntax error: C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\src\index.css The `outline-ring/50` class does not exist. If `outline-ring/50` is a custom class, make sure it is defined within a `@layer` directive. (1:1)
+
+[1m[31m>[39m[22m[90m 1 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 2 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 3 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+    at Object.<anonymous> (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[2]!C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[3]!C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\src\index.css:1:7)
+    at C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:962757
+    at Hook.eval [as call] (eval at create (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:14:9002), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:14:6272)
+    at C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:131569
+    at tryRunOrWebpackError (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:316088)
+    at __webpack_require_module__ (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:131536)
+    at __nested_webpack_require_161494__ (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:130971)
+    at C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\webpack\bundle5.js:29:131828
+    at symbolIterator (C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+
+Generated code for C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[2]!C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[3]!C:\Users\Ajzal\Downloads\Design System SaaS Landing Page\src\index.css
+
+Import trace for requested module:
+./src/index.css
+
+
+> Build failed because of webpack errors

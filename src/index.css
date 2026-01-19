@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-size: 14px;
+    --background: #f0f9ff;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #22d3ee;
+    --secondary-foreground: #030213;
+    --muted: #e0f2fe;
+    --muted-foreground: #64748b;
+    --accent: #1d4ed8;
+    --accent-foreground: #ffffff;
+    --destructive: #1d4ed8;
+    --destructive-foreground: #ffffff;
+    --border: rgba(59, 130, 246, 0.2);
+    --input: rgba(59, 130, 246, 0.1);
+    --input-background: #f3f3f5;
+    --switch-background: #cbced4;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --ring: #3b82f6;
+    --radius: 0.625rem;
+    --sidebar: #f0f9ff;
+    --sidebar-foreground: #0f172a;
+    --sidebar-primary: #3b82f6;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #22d3ee;
+    --sidebar-accent-foreground: #030213;
+    --sidebar-border: rgba(59, 130, 246, 0.2);
+    --sidebar-ring: #3b82f6;
+  }
+
+  .dark {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
+    --popover: #0f172a;
+    --popover-foreground: #f8fafc;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #22d3ee;
+    --secondary-foreground: #030213;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #1d4ed8;
+    --accent-foreground: #ffffff;
+    --destructive: #1d4ed8;
+    --destructive-foreground: #ffffff;
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: #3b82f6;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --sidebar: #0f172a;
+    --sidebar-foreground: #f8fafc;
+    --sidebar-primary: #3b82f6;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #22d3ee;
+    --sidebar-accent-foreground: #030213;
+    --sidebar-border: #1e293b;
+    --sidebar-ring: #3b82f6;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground relative overflow-x-hidden;
+    background: linear-gradient(-45deg, #dbeafe, #eff6ff, #dbeafe, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient-xy 20s ease infinite;
+  }
+
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p,
+    label,
+    button,
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}

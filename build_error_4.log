@@ -1,0 +1,379 @@
+
+> Design System SaaS Landing Page@0.1.0 build
+> next build
+
+⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+▲ Next.js 16.1.2 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 12 errors:
+./src/components/ui/label.tsx:4:1
+Module not found: Can't resolve '@radix-ui/react-label@2.1.2'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mLabelPrimitive[39m [36mfrom[39m [32m"@radix-ui/react-label@2.1.2"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"./utils"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/label.tsx [Client Component Browser]
+    ./src/components/LeadFormSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/label.tsx [Client Component SSR]
+    ./src/components/LeadFormSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ui/select.tsx:4:1
+Module not found: Can't resolve '@radix-ui/react-select@2.1.6'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mSelectPrimitive[39m [36mfrom[39m [32m"@radix-ui/react-select@2.1.6"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m {
+ [90m 6 |[39m   [33mCheckIcon[39m[33m,[39m
+ [90m 7 |[39m   [33mChevronDownIcon[39m[33m,[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/select.tsx [Client Component Browser]
+    ./src/components/LeadFormSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/select.tsx [Client Component SSR]
+    ./src/components/LeadFormSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ui/separator.tsx:4:1
+Module not found: Can't resolve '@radix-ui/react-separator@1.1.2'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mSeparatorPrimitive[39m [36mfrom[39m [32m"@radix-ui/react-separator@1.1.2"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"./utils"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/separator.tsx [Client Component Browser]
+    ./src/components/Footer.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/separator.tsx [Client Component SSR]
+    ./src/components/Footer.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ui/button.tsx:2:1
+Module not found: Can't resolve '@radix-ui/react-slot@1.1.2'
+[0m [90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mSlot[39m } [36mfrom[39m [32m"@radix-ui/react-slot@1.1.2"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m { cva[33m,[39m type [33mVariantProps[39m } [36mfrom[39m [32m"class-variance-authority@0.7.1"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"./utils"[39m[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/button.tsx [Client Component Browser]
+    ./src/components/LeadFormSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/button.tsx [Client Component SSR]
+    ./src/components/LeadFormSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ui/button.tsx:3:1
+Module not found: Can't resolve 'class-variance-authority@0.7.1'
+[0m [90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m { [33mSlot[39m } [36mfrom[39m [32m"@radix-ui/react-slot@1.1.2"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { cva[33m,[39m type [33mVariantProps[39m } [36mfrom[39m [32m"class-variance-authority@0.7.1"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"./utils"[39m[33m;[39m
+ [90m 6 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/button.tsx [Client Component Browser]
+    ./src/components/LeadFormSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/button.tsx [Client Component SSR]
+    ./src/components/LeadFormSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/BenefitsSection.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+[0m [90m 1 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardHeader[39m[33m,[39m [33mCardTitle[39m } [36mfrom[39m [32m"./ui/card"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mZap[39m[33m,[39m [33mShield[39m[33m,[39m [33mHeadphonesIcon[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m
+ [90m 4 |[39m [36mconst[39m benefits [33m=[39m [
+ [90m 5 |[39m   {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/BenefitsSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/BenefitsSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Header.tsx:4:1
+Module not found: Can't resolve 'lucide-react'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"./ui/button"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMenu[39m[33m,[39m [33mX[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mexport[39m [36mfunction[39m [33mHeader[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Header.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Header.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/IntroSection.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+[0m [90m 1 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardHeader[39m[33m,[39m [33mCardTitle[39m } [36mfrom[39m [32m"./ui/card"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mBuilding2[39m[33m,[39m [33mCreditCard[39m[33m,[39m [33mFileCheck[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m
+ [90m 4 |[39m [36mconst[39m services [33m=[39m [
+ [90m 5 |[39m   {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/IntroSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/IntroSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/LeadFormSection.tsx:14:1
+Module not found: Can't resolve 'lucide-react'
+[0m [90m 12 |[39m } [36mfrom[39m [32m"./ui/select"[39m[33m;[39m
+ [90m 13 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardDescription[39m[33m,[39m [33mCardHeader[39m[33m,[39m [33mCardTitle[39m } [36mfrom[39m [32m"./ui/card"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 14 |[39m [36mimport[39m { [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMessageCircle[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 15 |[39m [36mimport[39m { useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 16 |[39m
+ [90m 17 |[39m [36mexport[39m [36mfunction[39m [33mLeadFormSection[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/LeadFormSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/LeadFormSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ProcessSection.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+[0m [90m 1 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardHeader[39m[33m,[39m [33mCardTitle[39m } [36mfrom[39m [32m"./ui/card"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mMessageSquare[39m[33m,[39m [33mFileUp[39m[33m,[39m [33mBuilding[39m[33m,[39m [33mCheckCircle[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m
+ [90m 4 |[39m [36mconst[39m steps [33m=[39m [
+ [90m 5 |[39m   {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ProcessSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ProcessSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ServicesSection.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+[0m [90m  1 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardDescription[39m[33m,[39m [33mCardHeader[39m[33m,[39m [33mCardTitle[39m } [36mfrom[39m [32m"./ui/card"[39m[33m;[39m
+ [90m  2 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"./ui/button"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  3 |[39m [36mimport[39m { 
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  4 |[39m   [33mBuilding2[39m[33m,[39m 
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  5 |[39m   [33mFileText[39m[33m,[39m 
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  6 |[39m   [33mPlane[39m[33m,[39m 
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  7 |[39m   [33mCreditCard[39m[33m,[39m 
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  8 |[39m   [33mStethoscope[39m[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  9 |[39m   [33mUsers[39m[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 10 |[39m   [33mFileCheck[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 11 |[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 12 |[39m
+ [90m 13 |[39m [36mconst[39m services [33m=[39m [
+ [90m 14 |[39m   {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ServicesSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ServicesSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ui/select.tsx:5:1
+Module not found: Can't resolve 'lucide-react@0.487.0'
+[0m [90m  3 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m  4 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mSelectPrimitive[39m [36mfrom[39m [32m"@radix-ui/react-select@2.1.6"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  5 |[39m [36mimport[39m {
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  6 |[39m   [33mCheckIcon[39m[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  7 |[39m   [33mChevronDownIcon[39m[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  8 |[39m   [33mChevronUpIcon[39m[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m  9 |[39m } [36mfrom[39m [32m"lucide-react@0.487.0"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 10 |[39m
+ [90m 11 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"./utils"[39m[33m;[39m
+ [90m 12 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/select.tsx [Client Component Browser]
+    ./src/components/LeadFormSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/select.tsx [Client Component SSR]
+    ./src/components/LeadFormSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/components/ui/label.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ui/select.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ui/separator.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ui/button.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ui/button.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/BenefitsSection.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Header.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/IntroSection.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/LeadFormSection.tsx:14:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ProcessSection.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ServicesSection.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ui/select.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
