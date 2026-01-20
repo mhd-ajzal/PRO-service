@@ -18,6 +18,11 @@ const config = {
             },
         },
         extend: {
+            fontFamily: {
+                heading: ['Outfit', 'sans-serif'],
+                body: ['Manrope', 'sans-serif'],
+                sans: ['Manrope', 'sans-serif'],
+            },
             colors: {
                 border: "var(--border)",
                 input: "var(--input)",

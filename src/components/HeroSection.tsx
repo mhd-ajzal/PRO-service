@@ -81,10 +81,10 @@ export function HeroSection() {
 
         <FadeIn direction="up" delay={0.4}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-8 md:mb-12 px-4">
-            <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Button size="xl" className="w-full sm:w-auto" asChild>
               <a href="#contact">Request Consultation</a>
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+            <Button variant="outline" size="xl" className="w-full sm:w-auto" asChild>
               <a href="#contact">Contact Our Team</a>
             </Button>
           </div>
@@ -174,6 +174,15 @@ export function HeroSection() {
               <img
                 src="/assets/hero/hero-medical.png"
                 alt="Medical Test"
+                className="w-full h-auto object-contain drop-shadow-xl rounded-lg"
+              />
+            </div>
+
+            {/* HR Consultancy Card - Hidden on mobile */}
+            <div className="floating-card absolute top-12 right-2 md:top-12 md:right-4 w-32 md:w-52 transform-gpu hidden lg:block">
+              <img
+                src="/assets/hero/hero-hr-consultancy.jpg"
+                alt="HR Consultancy"
                 className="w-full h-auto object-contain drop-shadow-xl rounded-lg"
               />
             </div>

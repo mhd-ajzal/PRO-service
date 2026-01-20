@@ -33,12 +33,12 @@ export function ServicesSection() {
 
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
-  const [radius, setRadius] = useState(300);
+  const [radius, setRadius] = useState(450);
 
   useEffect(() => {
     setMounted(true);
     const updateRadius = () => {
-      setRadius(window.innerWidth < 768 ? 140 : 300);
+      setRadius(window.innerWidth < 768 ? 180 : 450);
     };
 
     updateRadius();
@@ -47,13 +47,15 @@ export function ServicesSection() {
   }, []);
 
   const orbitIcons = [
-    { Icon: Building2, color: "text-blue-500" },
-    { Icon: FileCheck, color: "text-green-500" },
-    { Icon: Users, color: "text-purple-500" },
-    { Icon: Globe, color: "text-indigo-500" },
-    { Icon: ShieldCheck, color: "text-red-500" },
-    { Icon: Scale, color: "text-amber-500" },
-    { Icon: Briefcase, color: "text-cyan-500" },
+    { src: "/images/orbit/land-department.png", alt: "Dubai Land Department" },
+    { src: "/images/orbit/ehs.jpg", alt: "EHS" },
+    { src: "/images/orbit/rta.jpg", alt: "RTA - Roads & Transport Authority" },
+    { src: "/images/orbit/ministry-economy.png", alt: "UAE Ministry of Economy & Tourism" },
+    { src: "/images/orbit/tax-authority.png", alt: "Federal Tax Authority" },
+    { src: "/images/orbit/civil-defense.jpg", alt: "Dubai Civil Defense" },
+    { src: "/images/orbit/uae-emblem.jpg", alt: "United Arab Emirates" },
+    { src: "/images/orbit/dubai-customs.jpg", alt: "Dubai Customs" },
+    { src: "/images/orbit/dubai-police.jpg", alt: "Dubai Police" },
   ];
 
   return (
@@ -70,7 +72,7 @@ export function ServicesSection() {
           {/* The Clipping Window for the Orbit */}
           {/* Height = Radius (approx) + icon buffer. Width = 2 * Radius + buffer. */}
           {/* We position the orbit center at the BOTTOM of this container. */}
-          <div className="relative w-full h-[280px] md:h-[350px] overflow-hidden">
+          <div className="relative w-full h-[340px] md:h-[500px] overflow-hidden">
             {mounted && <PhysicsOrbit icons={orbitIcons} radius={radius} />}
           </div>
 
@@ -154,11 +156,11 @@ function ServiceCard({ service, index }: { service: any, index: number }) {
   )
 }
 
-function PhysicsOrbit({ icons, radius = 300 }: { icons: any[], radius?: number }) {
+function PhysicsOrbit({ icons, radius = 450 }: { icons: any[], radius?: number }) {
   const angle = useMotionValue(0);
 
   useAnimationFrame((time) => {
-    const speed = 0.05;
+    const speed = 0.01;
     angle.set((time * speed) % 360);
   });
 
@@ -201,8 +203,12 @@ function PhysicsIcon({ item, index, total, baseAngle, radius }: any) {
       className="absolute flex items-center justify-center z-0"
       style={{ x, y }}
     >
-      <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-background/80 backdrop-blur-md border border-primary/20 shadow-lg flex items-center justify-center p-3 md:p-4">
-        <item.Icon className={cn("h-full w-full", item.color)} />
+      <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-white backdrop-blur-md border-2 border-primary/30 shadow-xl flex items-center justify-center p-1.5 md:p-2">
+        <img
+          src={item.src}
+          alt={item.alt}
+          className="w-full h-full object-contain"
+        />
       </div>
     </motion.div>
   );

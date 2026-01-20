@@ -76,7 +76,7 @@ export function LeadFormSection({
                       <div>
                         <h3 className="text-2xl md:text-3xl font-bold mb-6">Contact Information</h3>
                         <div className="space-y-6">
-                          <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
+                          <a href="tel:+971554591737" className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
                             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                               <Phone className="w-5 h-5" />
                             </div>
@@ -84,8 +84,8 @@ export function LeadFormSection({
                               <p className="text-sm font-medium text-muted-foreground mb-0.5">Call Us</p>
                               <p className="font-semibold text-lg">+971 55 459 1737</p>
                             </div>
-                          </div>
-                          <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
+                          </a>
+                          <a href="mailto:info@meronatic.com" className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
                             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                               <Mail className="w-5 h-5" />
                             </div>
@@ -93,7 +93,7 @@ export function LeadFormSection({
                               <p className="text-sm font-medium text-muted-foreground mb-0.5">Email Us</p>
                               <p className="font-semibold text-lg">info@meronatic.com</p>
                             </div>
-                          </div>
+                          </a>
                         </div>
                       </div>
                       <div className="pt-8 border-t border-primary/10">

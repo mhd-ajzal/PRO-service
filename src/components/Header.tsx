@@ -10,7 +10,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-3">
             <MeronaticLogo className="h-10 w-auto" />
@@ -32,10 +32,10 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center space-x-3">
-          <Button className="hidden md:inline-flex" size="sm" asChild>
+          <Button className="hidden md:inline-flex" size="lg" asChild>
             <a href="/#contact">Request Consultation</a>
           </Button>
-          <Button variant="outline" size="sm" className="hidden sm:inline-flex" asChild>
+          <Button variant="outline" size="lg" className="hidden sm:inline-flex" asChild>
             <a href="/#contact">Contact Our Team</a>
           </Button>
           <Button
@@ -82,11 +82,11 @@ export function Header() {
               Contact
             </a>
             <div className="pt-2 space-y-2">
-              <Button className="w-full" size="sm" asChild onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full" size="lg" asChild onClick={() => setMobileMenuOpen(false)}>
                 <a href="/#contact">Request Consultation</a>
               </Button>
-              <Button variant="outline" className="w-full" size="sm" asChild onClick={() => setMobileMenuOpen(false)}>
-                <a href="/#contact">Contact PRO Team</a>
+              <Button variant="outline" className="w-full" size="lg" asChild onClick={() => setMobileMenuOpen(false)}>
+                <a href="/#contact">Contact Our Team</a>
               </Button>
             </div>
           </nav>
