@@ -6,8 +6,8 @@ const nextConfig = {
         buildActivity: false,
         turbopack: false,
     },
-    output: "export",
-    basePath: process.env.NODE_ENV === "production" ? "/PRO-service" : "",
+    // output: "export", // Disabled for Netlify to allow API routes
+    // basePath: process.env.NODE_ENV === "production" ? "/PRO-service" : "", // Disabled for custom domain
     images: {
         unoptimized: true,
     },
