@@ -156,7 +156,7 @@ export function HeroSection() {
             {/* Documents - Moved to right side to balance layout */}
             {/* Documents - Moved to right side to balance layout */}
             {/* Documents - Moved to right side to balance layout */}
-            <div className="floating-card absolute top-20 right-32 md:top-64 md:right-8 w-36 md:w-44 transform-gpu hidden sm:block">
+            <div className="floating-card absolute top-2 right-2 md:top-64 md:right-8 w-20 md:w-44 transform-gpu">
               <img
                 src="/assets/hero/hero-docs.png"
                 alt="Documents"
@@ -170,7 +170,7 @@ export function HeroSection() {
             {/* Medical & Biometric Card - Hidden on mobile */}
             {/* Medical & Biometric Card - Hidden on mobile */}
             {/* Medical & Biometric Card - Hidden on mobile */}
-            <div className="floating-card absolute top-40 left-40 md:top-60 md:left-8 w-40 md:w-56 transform-gpu hidden md:block">
+            <div className="floating-card absolute bottom-2 left-20 md:top-60 md:left-8 w-24 md:w-56 transform-gpu">
               <img
                 src="/assets/hero/hero-medical.png"
                 alt="Medical Test"
@@ -178,8 +178,8 @@ export function HeroSection() {
               />
             </div>
 
-            {/* HR Consultancy Card - Hidden on mobile */}
-            <div className="floating-card absolute top-12 right-2 md:top-12 md:right-4 w-32 md:w-52 transform-gpu hidden lg:block">
+            {/* HR Consultancy Card - Now below Business Setup on mobile */}
+            <div className="floating-card absolute bottom-1 right-4 md:top-12 md:right-4 w-32 md:w-52 transform-gpu">
               <img
                 src="/assets/hero/hero-hr-consultancy.jpg"
                 alt="HR Consultancy"
