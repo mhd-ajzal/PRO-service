@@ -7,6 +7,7 @@ const nextConfig = {
         turbopack: false,
     },
     output: "export",
+    basePath: process.env.NODE_ENV === "production" ? "/PRO-service" : "",
     images: {
         unoptimized: true,
     },

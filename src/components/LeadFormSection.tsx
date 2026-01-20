@@ -142,6 +142,7 @@ export function LeadFormSection({
 
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+import { submitToN8n } from "../lib/n8n";
 
 function FormContent({ hideServiceDropdown, preselectedService }: { hideServiceDropdown: boolean, preselectedService?: string }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -165,13 +166,8 @@ function FormContent({ hideServiceDropdown, preselectedService }: { hideServiceD
     };
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) throw new Error("Submission failed");
+      // Use n8n helper
+      await submitToN8n(data);
 
       setSuccess(true);
     } catch (err) {
