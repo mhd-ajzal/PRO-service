@@ -34,7 +34,7 @@ export function ProcessSection() {
 
             <div className="container px-4 md:px-6 mx-auto">
                 <div className="flex flex-col items-center text-center mb-12 lg:mb-20">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight mb-4 text-foreground">
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-foreground">
                         How It Works
                     </h2>
                     <p className="text-muted-foreground text-lg md:text-xl max-w-[800px] leading-relaxed">
@@ -57,10 +57,10 @@ export function ProcessSection() {
                                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 transition-transform duration-300 hover:scale-110">
                                     <step.icon className="w-8 h-8 text-primary" />
                                 </div>
-                                <CardTitle className="text-xl font-bold">{step.title}</CardTitle>
+                                <CardTitle className="text-xl md:text-2xl font-bold">{step.title}</CardTitle>
                             </CardHeader>
                             <CardContent className="text-center pb-8">
-                                <p className="text-muted-foreground leading-relaxed">
+                                <p className="text-base text-muted-foreground leading-relaxed">
                                     {step.description}
                                 </p>
                             </CardContent>

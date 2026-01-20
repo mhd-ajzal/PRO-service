@@ -10,7 +10,7 @@ const fontSans = FontSans({
 });
 
 export const metadata = {
-    title: "Design System SaaS Landing Page",
+    title: "Meronatic PRO Services",
     description: "Professional PRO Services in UAE",
 };
 

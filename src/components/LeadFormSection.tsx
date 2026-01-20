@@ -63,8 +63,8 @@ export function LeadFormSection({
                 {/* Form Side (Span 7 or 12) */}
                 <div className={`${withContactInfo ? 'lg:col-span-7' : 'lg:col-span-12 max-w-4xl mx-auto w-full'} p-6 md:p-10 lg:p-12 relative`}>
                   <div className="space-y-3 mb-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
-                    <p className="text-lg text-muted-foreground">{subtitle}</p>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">{title}</h2>
+                    <p className="text-lg md:text-xl text-muted-foreground">{subtitle}</p>
                   </div>
                   <FormContent hideServiceDropdown={hideServiceDropdown} preselectedService={preselectedService} />
                 </div>
@@ -74,7 +74,7 @@ export function LeadFormSection({
                   <div className="lg:col-span-5 bg-primary/5 border-l border-primary/10 relative overflow-hidden flex flex-col justify-center">
                     <div className="p-6 md:p-10 space-y-8">
                       <div>
-                        <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-6">Contact Information</h3>
                         <div className="space-y-6">
                           <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
                             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -82,7 +82,7 @@ export function LeadFormSection({
                             </div>
                             <div>
                               <p className="text-sm font-medium text-muted-foreground mb-0.5">Call Us</p>
-                              <p className="font-semibold text-lg">+971 50 123 4567</p>
+                              <p className="font-semibold text-lg">+971 55 459 1737</p>
                             </div>
                           </div>
                           <div className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
@@ -124,8 +124,8 @@ export function LeadFormSection({
           <div className="max-w-3xl mx-auto">
             <Card className="border-primary/20 shadow-2xl bg-card/80 backdrop-blur">
               <CardHeader className="text-center space-y-2">
-                <CardTitle className="text-3xl md:text-4xl">{title}</CardTitle>
-                <CardDescription className="text-lg">
+                <CardTitle className="text-3xl md:text-5xl lg:text-6xl">{title}</CardTitle>
+                <CardDescription className="text-lg md:text-xl">
                   {subtitle}
                 </CardDescription>
               </CardHeader>

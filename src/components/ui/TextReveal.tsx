@@ -27,6 +27,7 @@ export const TextReveal = ({ text, el: Wrapper = "p", className, delay = 0 }: Te
         visible: {
             opacity: 1,
             y: 0,
+            filter: "blur(0px)",
             transition: {
                 type: "spring",
                 damping: 12,
@@ -36,6 +37,7 @@ export const TextReveal = ({ text, el: Wrapper = "p", className, delay = 0 }: Te
         hidden: {
             opacity: 0,
             y: 20,
+            filter: "blur(4px)",
             transition: {
                 type: "spring",
                 damping: 12,
@@ -44,19 +46,29 @@ export const TextReveal = ({ text, el: Wrapper = "p", className, delay = 0 }: Te
         },
     };
 
+    const words = text.split(" ");
+
     return (
         <Wrapper className={className}>
             <motion.span
                 ref={ref}
-                style={{ display: "inline-block" }} // Important for layout
                 variants={container}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
+                className="inline-block" // Ensure wrapper behaves like text
             >
-                {text.split("").map((char, index) => (
-                    <motion.span variants={child} key={index}>
-                        {char === "\n" ? <br /> : char === " " ? "\u00A0" : char}
-                    </motion.span>
+                {words.map((word, i) => (
+                    <span key={i} className="inline-block whitespace-nowrap">
+                        {word.split("").map((char, j) => (
+                            <motion.span variants={child} key={j} className="inline-block">
+                                {char}
+                            </motion.span>
+                        ))}
+                        {/* Add space after word unless it's the last one */}
+                        {i !== words.length - 1 && (
+                            <span className="inline-block">&nbsp;</span>
+                        )}
+                    </span>
                 ))}
             </motion.span>
         </Wrapper>

@@ -19,7 +19,8 @@ const iconMap: Record<string, any> = {
   "emirates-id": CreditCard,
   "medical-biometrics": Users,
   "mohre-gdrfa": FileCheck,
-  "document-attestation": ShieldCheck
+  "document-attestation": ShieldCheck,
+  "hr-consultancy": Briefcase
 };
 
 export function ServicesSection() {
@@ -32,8 +33,17 @@ export function ServicesSection() {
 
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
+  const [radius, setRadius] = useState(300);
+
   useEffect(() => {
     setMounted(true);
+    const updateRadius = () => {
+      setRadius(window.innerWidth < 768 ? 140 : 300);
+    };
+
+    updateRadius();
+    window.addEventListener('resize', updateRadius);
+    return () => window.removeEventListener('resize', updateRadius);
   }, []);
 
   const orbitIcons = [
@@ -47,7 +57,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-20 md:py-32 relative bg-transparent overflow-hidden" ref={containerRef}>
+    <section id="services" className="py-12 md:py-32 relative bg-transparent overflow-hidden" ref={containerRef}>
       {/* Background Decor */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -z-10" />
 
@@ -61,7 +71,7 @@ export function ServicesSection() {
           {/* Height = Radius (approx) + icon buffer. Width = 2 * Radius + buffer. */}
           {/* We position the orbit center at the BOTTOM of this container. */}
           <div className="relative w-full h-[280px] md:h-[350px] overflow-hidden">
-            {mounted && <PhysicsOrbit icons={orbitIcons} radius={300} />}
+            {mounted && <PhysicsOrbit icons={orbitIcons} radius={radius} />}
           </div>
 
           {/* Heading - Placed "Middle of the loop" (Geometrically, inside the arch) */}
@@ -69,10 +79,10 @@ export function ServicesSection() {
           {/* We pull it up slightly to sit nicely under the arch. */}
           <div className="text-center -mt-12 md:-mt-20 relative z-20">
             <FadeIn direction="up">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
                 Corporate Services
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4 mt-8">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4 mt-8">
                 Comprehensive solutions for business setup, residency, and compliance in the UAE.
               </p>
             </FadeIn>
@@ -108,7 +118,7 @@ function ServiceCard({ service, index }: { service: any, index: number }) {
                 <Icon className="h-5 w-5" />
               </div>
               <div>
-                <CardTitle className="text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl md:text-2xl font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                   {service.title}
                 </CardTitle>
                 <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium">
@@ -118,7 +128,7 @@ function ServiceCard({ service, index }: { service: any, index: number }) {
             </div>
 
             {/* Description */}
-            <CardDescription className="text-sm line-clamp-3 mb-4 leading-relaxed">
+            <CardDescription className="text-base line-clamp-3 mb-4 leading-relaxed">
               {service.description}
             </CardDescription>
 
@@ -126,8 +136,8 @@ function ServiceCard({ service, index }: { service: any, index: number }) {
             <div className="mt-auto pt-4 border-t border-primary/5">
               <ul className="grid grid-cols-1 gap-2 mb-4">
                 {service.benefits?.slice(0, 3).map((benefit: string, i: number) => (
-                  <li key={i} className="flex items-center text-xs font-medium text-muted-foreground">
-                    <div className="w-1 h-1 rounded-full bg-primary/60 mr-2 shrink-0" />
+                  <li key={i} className="flex items-center text-sm font-medium text-muted-foreground">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/60 mr-2 shrink-0" />
                     {benefit}
                   </li>
                 ))}

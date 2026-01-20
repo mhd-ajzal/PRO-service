@@ -24,15 +24,15 @@ export function AboutSection() {
               </div>
             </FadeIn>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 text-center md:text-left">
             <FadeIn direction="left" delay={0.2}>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
                 About Meronatic
               </h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
                 Meronatic is a UAE-based Corporate Services provider specializing in business support, government coordination, and compliance solutions.
               </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                 Our mission is to remove complexity and make UAE government processes smooth and predictable. We focus on transparency, accuracy, legal compliance, and time efficiency.
               </p>
 

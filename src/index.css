@@ -37,6 +37,13 @@
     --sidebar-accent-foreground: #030213;
     --sidebar-border: rgba(59, 130, 246, 0.2);
     --sidebar-ring: #3b82f6;
+
+    /* Font Sizes */
+    --text-2xl: 1.5rem;
+    --text-xl: 1.25rem;
+    --text-lg: 1.125rem;
+    --text-base: 1rem;
+    --text-sm: 0.875rem;
   }
 
   .dark {

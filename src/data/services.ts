@@ -157,5 +157,26 @@ export const services: ServiceData[] = [
             "Embassy and consulate verification.",
             "Certified legal translation services."
         ]
+    },
+    {
+        id: "hr-consultancy",
+        title: "HR Consultancy",
+        slug: "hr-consultancy",
+        image: "/assets/services/business-setup.png",
+        description: "Strategic HR solutions to manage talent, compliance, and workforce operations efficiently.",
+        benefits: [
+            "Recruitment & talent acquisition",
+            "Employee onboarding & documentation",
+            "HR policy development & compliance",
+            "Payroll & benefits advisory"
+        ],
+        ctaText: "Consult HR Experts",
+        details: [
+            "Recruitment & talent acquisition.",
+            "Employee onboarding & documentation.",
+            "HR policy development & compliance.",
+            "Payroll & benefits advisory.",
+            "Performance management support."
+        ]
     }
 ];

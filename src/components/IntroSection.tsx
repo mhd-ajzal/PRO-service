@@ -27,14 +27,14 @@ const services = [
 
 export function IntroSection() {
   return (
-    <section className="py-20 md:py-32 bg-transparent">
+    <section className="py-12 md:py-32 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
           <FadeIn direction="up">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
               Service Overview
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               We simplify complex UAE government procedures so you can focus on running and growing your business.
             </p>
           </FadeIn>
@@ -47,10 +47,10 @@ export function IntroSection() {
                   <div className="flex justify-center mb-4">
                     <service.icon className="h-10 w-10 md:h-12 md:w-12 text-primary" />
                   </div>
-                  <CardTitle className="text-base md:text-lg">{service.title}</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                  <p className="text-base text-muted-foreground">{service.description}</p>
                 </CardContent>
               </Card>
             </FadeIn>

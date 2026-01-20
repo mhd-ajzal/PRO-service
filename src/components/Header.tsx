@@ -14,19 +14,19 @@ export function Header() {
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-3">
             <MeronaticLogo className="h-10 w-auto" />
-            <span className="text-lg font-semibold">Meronatic</span>
+            <span className="text-lg font-semibold">Meronatic PRO Services</span>
           </div>
           <nav className="hidden lg:flex items-center space-x-6">
-            <a href="/#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#services" className="text-base text-muted-foreground hover:text-foreground transition-colors">
               Services
             </a>
-            <a href="/#benefits" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#benefits" className="text-base text-muted-foreground hover:text-foreground transition-colors">
               Benefits
             </a>
-            <a href="/#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#process" className="text-base text-muted-foreground hover:text-foreground transition-colors">
               Process
             </a>
-            <a href="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#contact" className="text-base text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
           </nav>
@@ -44,7 +44,7 @@ export function Header() {
             className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </div>
@@ -55,28 +55,28 @@ export function Header() {
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-3">
             <a
               href="/#services"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+              className="text-base font-medium text-foreground hover:text-primary transition-colors py-3 border-b border-border/10"
               onClick={() => setMobileMenuOpen(false)}
             >
               Services
             </a>
             <a
               href="/#benefits"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+              className="text-base font-medium text-foreground hover:text-primary transition-colors py-3 border-b border-border/10"
               onClick={() => setMobileMenuOpen(false)}
             >
               Benefits
             </a>
             <a
               href="/#process"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+              className="text-base font-medium text-foreground hover:text-primary transition-colors py-3 border-b border-border/10"
               onClick={() => setMobileMenuOpen(false)}
             >
               Process
             </a>
             <a
               href="/#contact"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+              className="text-base font-medium text-foreground hover:text-primary transition-colors py-3 border-b border-border/10"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact

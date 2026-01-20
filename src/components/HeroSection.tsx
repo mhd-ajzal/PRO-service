@@ -6,6 +6,7 @@ import { MeronaticLogo } from "./MeronaticLogo";
 import { FadeIn } from "./ui/FadeIn";
 import { TextReveal } from "./ui/TextReveal";
 
+
 export function HeroSection() {
   const sceneRef = useRef<HTMLDivElement>(null);
   const [particles, setParticles] = useState<{ left: string; top: string; delay: string; duration: string }[]>([]);
@@ -57,21 +58,23 @@ export function HeroSection() {
     <section className="relative py-20 md:py-32 overflow-hidden bg-transparent">
       <div className="container mx-auto px-4 text-center">
         <FadeIn direction="up" delay={0.1}>
-          <h1 className="mx-auto max-w-4xl text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight mb-4 md:mb-6">
-            UAE HR Consultancy Corporate Services & Business Support
+          <h1 className="mx-auto max-w-4xl text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight mb-4 md:mb-6">
+            UAE Corporate Services & Business Support
           </h1>
         </FadeIn>
 
-        <FadeIn direction="up" delay={0.2}>
-          <p className="mx-auto max-w-3xl text-base md:text-lg lg:text-xl text-muted-foreground mb-3 md:mb-4 px-4 font-medium">
-            Fast. Compliant. End-to-End Government & Business Solutions
-          </p>
-        </FadeIn>
+        <div className="mb-3 md:mb-4 px-4">
+          <FadeIn direction="up" delay={0.2}>
+            <p className="mx-auto max-w-3xl text-lg md:text-xl lg:text-2xl text-muted-foreground font-medium">
+              Fast. Compliant. End-to-End Government & Business Solutions
+            </p>
+          </FadeIn>
+        </div>
 
         <div className="mb-6 md:mb-8 px-4">
           <TextReveal
-            text={`Meronatic provides professional Corporate Services in the UAE, helping businesses and individuals manage licensing,\ngovernment procedures, visas, and compliance through a structured and legally compliant process.`}
-            className="mx-auto max-w-3xl text-sm md:text-base text-muted-foreground"
+            text="Meronatic provides professional Corporate Services in the UAE, helping businesses and individuals manage licensing, government procedures, visas, and compliance through a structured and legally compliant process."
+            className="mx-auto max-w-4xl text-base md:text-lg text-muted-foreground leading-relaxed"
             delay={0.4}
           />
         </div>
@@ -105,7 +108,7 @@ export function HeroSection() {
             {/* Trade License Card */}
             {/* Trade License Card */}
             {/* Trade License Card */}
-            <div className="floating-card absolute top-8 left-4 md:top-8 md:left-8 w-36 md:w-52 transform-gpu">
+            <div className="floating-card absolute top-8 left-4 md:top-8 md:left-8 w-24 md:w-52 transform-gpu">
               <img
                 src="/assets/hero/hero-trade-license.png"
                 alt="Trade License"
@@ -117,7 +120,7 @@ export function HeroSection() {
             {/* Visa Processing Card */}
             {/* Visa Processing Card */}
             {/* Visa Processing Card */}
-            <div className="floating-card absolute top-20 right-4 md:top-20 md:right-6 w-36 md:w-48 transform-gpu">
+            <div className="floating-card absolute top-20 right-4 md:top-20 md:right-6 w-24 md:w-48 transform-gpu">
               <img
                 src="/assets/hero/hero-approval.png"
                 alt="Visa Processing"
@@ -129,7 +132,7 @@ export function HeroSection() {
             {/* Emirates ID Card */}
             {/* Emirates ID Card */}
             {/* Emirates ID Card */}
-            <div className="floating-card absolute bottom-12 left-2 md:bottom-10 md:left-8 w-40 md:w-60 transform-gpu">
+            <div className="floating-card absolute bottom-12 left-2 md:bottom-10 md:left-8 w-28 md:w-60 transform-gpu">
               <img
                 src="/assets/hero/hero-id.png"
                 alt="Emirates ID"
@@ -141,7 +144,7 @@ export function HeroSection() {
             {/* Business Setup Card */}
             {/* Business Setup Card */}
             {/* Business Setup Card */}
-            <div className="floating-card absolute bottom-16 right-4 md:bottom-12 md:right-8 w-36 md:w-52 transform-gpu">
+            <div className="floating-card absolute bottom-16 right-4 md:bottom-12 md:right-8 w-24 md:w-52 transform-gpu">
               <img
                 src="/assets/hero/hero-setup.png"
                 alt="Business Setup"

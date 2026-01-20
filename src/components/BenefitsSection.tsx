@@ -26,7 +26,7 @@ export function BenefitsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <FadeIn direction="up">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight mb-4 px-4 font-bold">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl tracking-tight mb-4 px-4 font-bold">
               MERONATIC Advantages
             </h2>
           </FadeIn>
@@ -41,10 +41,10 @@ export function BenefitsSection() {
                       <benefit.icon className="h-8 w-8 md:h-10 md:w-10 text-primary" />
                     </div>
                   </div>
-                  <CardTitle className="text-lg md:text-xl">{benefit.title}</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl">{benefit.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <p className="text-sm md:text-base text-muted-foreground">{benefit.description}</p>
+                  <p className="text-base text-muted-foreground">{benefit.description}</p>
                 </CardContent>
               </Card>
             </FadeIn>
