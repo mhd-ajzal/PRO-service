@@ -6,6 +6,11 @@ const nextConfig = {
         buildActivity: false,
         turbopack: false,
     },
+    output: "export",
+    basePath: "/PRO-service",
+    images: {
+        unoptimized: true,
+    },
     webpack: (config) => {
         config.resolve.alias = {
             ...config.resolve.alias,
