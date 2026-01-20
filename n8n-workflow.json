@@ -1,5 +1,5 @@
 {
-    "name": "Form Submission to Email",
+    "name": "Form Submission to Email (Production)",
     "nodes": [
         {
             "parameters": {
@@ -18,9 +18,9 @@
         {
             "parameters": {
                 "fromEmail": "admin@meronatic.com",
-                "toEmail": "dev1@meronatic.com",
-                "subject": "New Lead: {{json[\"fullName\"]}}",
-                "text": "New lead submission:\n\nName: {{json[\"fullName\"]}}\nPhone: {{json[\"phone\"]}}\nEmail: {{json[\"email\"]}}\nService: {{json[\"service\"]}}\nMessage: {{json[\"message\"]}}\nSource: {{json[\"source\"]}}\nDate: {{json[\"timestamp\"]}}",
+                "toEmail": "hr@meronatic.com",
+                "subject": "={{ \"New Lead: \" + $json.body.fullName }}",
+                "text": "={{ \"New lead submission:\\n\\nName: \" + $json.body.fullName + \"\\nPhone: \" + $json.body.phone + \"\\nEmail: \" + $json.body.email + \"\\nService: \" + $json.body.service + \"\\nMessage: \" + $json.body.message + \"\\nSource: \" + $json.body.source + \"\\nDate: \" + $json.body.timestamp }}",
                 "options": {}
             },
             "name": "Send Email",

@@ -1,5 +1,6 @@
 export async function submitToN8n(data: any) {
-    const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL || "http://localhost:5678/webhook-test/form-submission"; // Replace with user's actual URL later
+    // Call our local API proxy to avoid CORS issues
+    const webhookUrl = "/api/contact";
 
     try {
         const response = await fetch(webhookUrl, {
