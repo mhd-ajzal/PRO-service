@@ -203,7 +203,7 @@ function PhysicsIcon({ item, index, total, baseAngle, radius }: any) {
       className="absolute flex items-center justify-center z-0"
       style={{ x, y }}
     >
-      <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-white backdrop-blur-md border-2 border-primary/30 shadow-xl flex items-center justify-center p-1.5 md:p-2">
+      <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-white/95 backdrop-blur-md border border-primary/20 shadow-lg flex items-center justify-center p-3 md:p-4">
         <img
           src={item.src}
           alt={item.alt}
