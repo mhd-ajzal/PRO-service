@@ -171,7 +171,8 @@ function FormContent({ hideServiceDropdown, preselectedService }: { hideServiceD
 
       setSuccess(true);
     } catch (err) {
-      setError("Something went wrong. Please try again.");
+      console.error(err);
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

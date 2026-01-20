@@ -12,7 +12,9 @@ export async function submitToN8n(data: any) {
         });
 
         if (!response.ok) {
-            throw new Error(`n8n submission failed: ${response.statusText}`);
+            const errorData = await response.json().catch(() => ({}));
+            const errorMessage = errorData.error || `Request failed with status ${response.status}`;
+            throw new Error(errorMessage);
         }
 
         return await response.json().catch(() => ({ success: true })); // Handle cases where n8n returns simple text
