@@ -6,6 +6,10 @@ const nextConfig = {
         buildActivity: false,
         turbopack: false,
     },
+    output: "export",
+    images: {
+        unoptimized: true,
+    },
     webpack: (config) => {
         config.resolve.alias = {
             ...config.resolve.alias,
