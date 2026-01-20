@@ -13,7 +13,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-4">
               <div className="flex items-center justify-center md:justify-start gap-2">
                 <MeronaticLogo className="w-8 h-8" />
-                <span className="text-xl font-bold text-foreground">Meronatic PRO Services</span>
+                <span className="text-xl font-bold text-foreground">Meronatic</span>
               </div>
             </Link>
             <p className="mb-6 max-w-sm leading-relaxed mx-auto md:mx-0">
