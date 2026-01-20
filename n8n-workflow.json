@@ -1,0 +1,48 @@
+{
+    "name": "Form Submission to Email",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "form-submission",
+                "options": {}
+            },
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                460,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "fromEmail": "admin@meronatic.com",
+                "toEmail": "dev1@meronatic.com",
+                "subject": "New Lead: {{json[\"fullName\"]}}",
+                "text": "New lead submission:\n\nName: {{json[\"fullName\"]}}\nPhone: {{json[\"phone\"]}}\nEmail: {{json[\"email\"]}}\nService: {{json[\"service\"]}}\nMessage: {{json[\"message\"]}}\nSource: {{json[\"source\"]}}\nDate: {{json[\"timestamp\"]}}",
+                "options": {}
+            },
+            "name": "Send Email",
+            "type": "n8n-nodes-base.emailSend",
+            "typeVersion": 1,
+            "position": [
+                680,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Send Email",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}
