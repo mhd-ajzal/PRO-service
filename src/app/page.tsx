@@ -23,7 +23,7 @@ export default function Home() {
                 <ProcessSection />
                 <AboutSection />
                 <BenefitsSection />
-                <PartnersSection />
+                {/* <PartnersSection /> */}
                 <LeadFormSection />
             </main>
             <Footer />

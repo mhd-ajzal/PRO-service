@@ -11,22 +11,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-8 h-full">
           <div className="flex items-center space-x-3">
             <MeronaticLogo className="h-10 w-auto" />
             <span className="text-lg font-semibold">Meronatic</span>
           </div>
           <nav className="hidden lg:flex items-center space-x-6">
-            <a href="/#services" className="text-base text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#services" className="relative h-full flex items-center text-base font-semibold text-foreground hover:text-primary transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
               Services
             </a>
-            <a href="/#benefits" className="text-base text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#benefits" className="relative h-full flex items-center text-base font-semibold text-foreground hover:text-primary transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
               Benefits
             </a>
-            <a href="/#process" className="text-base text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#process" className="relative h-full flex items-center text-base font-semibold text-foreground hover:text-primary transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
               Process
             </a>
-            <a href="/#contact" className="text-base text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/#contact" className="relative h-full flex items-center text-base font-semibold text-foreground hover:text-primary transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">
               Contact
             </a>
           </nav>
