@@ -91,15 +91,17 @@ export function LeadFormSection({
                             </div>
                             <div>
                               <p className="text-sm font-medium text-muted-foreground mb-0.5">Email Us</p>
-                              <p className="font-semibold text-lg">info@meronatic.com</p>
+                              <p className="font-semibold text-lg">info@meronaticpro.com</p>
                             </div>
                           </a>
                         </div>
                       </div>
                       <div className="pt-8 border-t border-primary/10">
-                        <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white border-none shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
-                          <MessageCircle className="w-5 h-5" />
-                          Chat on WhatsApp
+                        <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white border-none shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all" asChild>
+                          <a href="https://wa.me/971554591737" target="_blank" rel="noopener noreferrer">
+                            <MessageCircle className="w-5 h-5" />
+                            Chat on WhatsApp
+                          </a>
                         </Button>
                       </div>
                     </div>
