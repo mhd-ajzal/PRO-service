@@ -57,9 +57,9 @@ export function Footer() {
               <li>Phone: +971 55 459 1737</li>
               <li>Email: info@meronatic.com</li>
               <li className="pt-4 font-semibold text-foreground">Legal</li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Disclaimer</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
+              <li><Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li>
             </ul>
           </div>
         </div>

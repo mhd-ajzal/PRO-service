@@ -13,7 +13,7 @@ export function AboutSection() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl transform rotate-3 scale-105 -z-10" />
                 <img
-                  src="/assets/about-image.png"
+                  src="/images/mero-about.png"
                   alt="Meronatic Office"
                   className="rounded-3xl shadow-2xl w-full h-auto object-cover grayscale-0 md:grayscale-0 hover:grayscale-0 transition-all duration-500"
                   onError={(e) => {

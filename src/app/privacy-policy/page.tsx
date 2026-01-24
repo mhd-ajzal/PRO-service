@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
 
             <div className="space-y-8 text-base leading-relaxed text-foreground/90">
                 <p>
-                    Meronatic PRO Services ("we," "our," or "us") is committed to protecting the privacy and confidentiality of our
+                    Meronatic PRO Services is committed to protecting the privacy and confidentiality of our
                     clients and website visitors. This Privacy Policy explains how we collect, use, store, and
                     protect your personal information in compliance with applicable UAE laws and regulations.
                 </p>
