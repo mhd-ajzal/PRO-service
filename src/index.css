@@ -161,3 +161,19 @@ html {
   font-family: 'Manrope', sans-serif;
   scroll-behavior: smooth;
 }
+
+/* Chatwoot Widget positioning override */
+.woot-widget-holder {
+  bottom: 96px !important; /* Position above WhatsApp button (24px bottom + 56px height + 16px gap) */
+  right: 24px !important; /* Align vertically with WhatsApp button (right-6) */
+  width: 56px !important; /* Resize to match WhatsApp button width */
+  height: 56px !important; /* Resize to match WhatsApp button height */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 9999px !important; /* Ensure it's circular */
+}
+
+/* Ensure iframe fills container */
+.woot-widget-holder iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
