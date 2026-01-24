@@ -85,7 +85,7 @@ export function LeadFormSection({
                               <p className="font-semibold text-lg">+971 55 459 1737</p>
                             </div>
                           </a>
-                          <a href="mailto:info@meronatic.com" className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
+                          <a href="mailto:info@meronaticpro.com" className="flex items-start gap-4 group cursor-pointer hover:bg-primary/5 p-3 rounded-lg -mx-3 transition-colors">
                             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                               <Mail className="w-5 h-5" />
                             </div>
