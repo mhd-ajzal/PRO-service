@@ -55,7 +55,7 @@ export function Footer() {
             <h3 className="text-foreground font-semibold mb-4">Contact & Support</h3>
             <ul className="space-y-3">
               <li>Phone: +971 55 459 1737</li>
-              <li>Email: info@meronatic.com</li>
+              <li>Email: info@meronaticpro.com</li>
               <li className="pt-4 font-semibold text-foreground">Legal</li>
               <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
